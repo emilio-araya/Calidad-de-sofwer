@@ -1,0 +1,47 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+}
+header {
+  background: #222;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+nav button {
+  margin: 5px;
+  padding: 8px 12px;
+  background: #444;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+nav button:hover {
+  background: #666;
+}
+main {
+  padding: 20px;
+}
+section {
+  display: none;
+}
+section.active {
+  display: block;
+}
+input, button {
+  margin: 5px 0;
+  padding: 8px;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li {
+  margin: 5px 0;
+  background: #ddd;
+  padding: 5px;
+  border-radius: 4px;
+}

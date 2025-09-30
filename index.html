@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EchoVibe</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>EchoVibe</h1>
+      <nav>
+        <button onclick="showSection('login')">Login</button>
+        <button onclick="showSection('search')">Buscar</button>
+        <button onclick="showSection('playlists')">Playlists</button>
+        <button onclick="showSection('player')">Reproductor</button>
+        <button onclick="showSection('eco')">Impacto Eco</button>
+      </nav>
+    </header>
+
+    <main>
+      <section id="login" class="active">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Usuario">
+        <input type="password" id="password" placeholder="Contraseña">
+        <button onclick="login()">Ingresar</button>
+        <p id="loginMsg"></p>
+      </section>
+
+      <section id="search">
+        <h2>Buscar Canciones</h2>
+        <input type="text" id="searchBox" placeholder="Buscar...">
+        <button onclick="searchSong()">Buscar</button>
+        <ul id="results"></ul>
+      </section>
+
+      <section id="playlists">
+        <h2>Playlists</h2>
+        <input type="text" id="playlistName" placeholder="Nueva Playlist">
+        <button onclick="addPlaylist()">Crear</button>
+        <ul id="playlistList"></ul>
+      </section>
+
+      <section id="player">
+        <h2>Reproductor</h2>
+        <p id="currentSong">Sin canción</p>
+        <button onclick="playSong()">▶️ Play</button>
+        <button onclick="pauseSong()">⏸️ Pause</button>
+        <button onclick="nextSong()">⏭️ Next</button>
+      </section>
+
+      <section id="eco">
+        <h2>Impacto Ambiental</h2>
+        <p>Ancho de banda ahorrado: <span id="bandwidth">0 MB</span></p>
+        <p>CO₂ ahorrado: <span id="co2">0 kg</span></p>
+        <button onclick="updateEco()">Actualizar Métricas</button>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
